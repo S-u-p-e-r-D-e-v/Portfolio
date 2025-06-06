@@ -26,7 +26,7 @@ I'm a **young full-stack-in-training dev** who builds bots, dashboards, homelab 
 
 - 📧 Email: [middletonjosiah9@gmail.com](mailto:middletonjosiah9@gmail.com)
 - 🎮 Discord: `@superdev14`
-- 🌐 Portfolio: [https://s-u-p-e-r-d-e-v.github.io/portfolio](https://yourusername.github.io/portfolio)
+- 🌐 Portfolio: [https://s-u-p-e-r-d-e-v.github.io/portfolio](https://s-u-p-e-r-d-e-v.github.io/portfolio)
 
 ---
 
