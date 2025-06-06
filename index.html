@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Super Dev | Portfolio</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --accent: #4f46e5;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0d1117;
+      --text: #e6edf3;
+      --accent: #60a5fa;
+    }
+
+    * {
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .toggle {
+      cursor: pointer;
+      font-size: 1.2rem;
+      background: none;
+      border: none;
+      color: var(--accent);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      color: var(--accent);
+    }
+
+    .projects {
+      padding: 2rem;
+    }
+
+    .project {
+      background: rgba(0, 0, 0, 0.03);
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    @media (min-width: 600px) {
+      .projects {
+        max-width: 800px;
+        margin: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <strong>Super Dev</strong>
+    <button class="toggle" onclick="toggleTheme()">🌓</button>
+  </header>
+
+  <section class="hero">
+    <h1>Yo, I'm Josiah 👋</h1>
+    <h2>Frontend Dev • Bot Builder</h2>
+    <p>I build clean websites, automate cool stuff, and host everything myself.</p>
+  </section>
+
+  <section class="projects">
+    <h2>🚀 Projects</h2>
+
+    <div class="project">
+      <h3>Streamer Dashboard</h3>
+      <p>Self-hosted dashboard with Discord & TikTok live logic.</p>
+    </div>
+
+    <div class="project">
+      <h3>Server Setups</h3>
+      <p>Proxmox + Docker stack running Jellyfin, bots, and other tools.</p>
+    </div>
+
+    <div class="project">
+      <h3>Discord Bot System</h3>
+      <p>Lobby queues, role assignment, live event alerts built in Node.js.</p>
+    </div>
+  </section>
+  <script>
+    const toggleTheme = () => {
+      const theme = document.documentElement.getAttribute("data-theme");
+      if (theme === "dark") {
+        document.documentElement.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+      }
+    };
+
+    // Set theme from localStorage
+    (function () {
+      const saved = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", saved);
+    })();
+  </script>
+
+</body>
+</html>
