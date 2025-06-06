@@ -71,11 +71,24 @@
       border-radius: 0.5rem;
     }
 
+    .project h3 {
+      margin: 0 0 0.5rem;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
       opacity: 0.7;
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent);
     }
 
     @media (min-width: 600px) {
@@ -117,6 +130,30 @@
       <p>Lobby queues, role assignment, live event alerts built in Node.js.</p>
     </div>
   </section>
+
+  <section class="projects">
+    <h2>🌐 Example Sites</h2>
+
+    <div class="project">
+      <h3><a href="login-example.html" target="_blank">Login Page UI</a></h3>
+      <p>Sleek dark-mode login screen — just for looks.</p>
+    </div>
+
+    <div class="project">
+      <h3><a href="error-example.html" target="_blank">404 Not Found Page</a></h3>
+      <p>Custom styled error page with clean fallback link.</p>
+    </div>
+
+    <div class="project">
+      <h3><a href="coming-soon.html" target="_blank">Coming Soon Page</a></h3>
+      <p>Teaser splash screen for future drops.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Super Dev. Built with HTML, CSS & 🔥
+  </footer>
+
   <script>
     const toggleTheme = () => {
       const theme = document.documentElement.getAttribute("data-theme");
